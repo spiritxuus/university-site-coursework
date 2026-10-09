@@ -1,7 +1,7 @@
 .glass-panel {
     border-radius: 32px;
     box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.3); 
+    background-color: rgba(0, 128, 255, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); 
@@ -91,15 +91,68 @@
 .news-section {
     width: 80%;
     height: 400px; 
+    padding: 2rem;
+}
+
+.news-slider{
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.news-slider__track{
+    display: flex;
+    gap: 1rem;
+}
+
+.news-card{
+    box-sizing: border-box;
+    flex: 0 0 50%;
+    scroll-snap-align: start;
+    padding: 1.5rem;
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .faculty-section {
     width: 80%;
-    height: 400px; 
+    margin: 3rem auto;
+    padding: 2rem;
+}
+
+.faculty-grid{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.faculty-card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1.25rem;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.faculty-card:hover{
+    transform: translateY(-4px);
+    background-color: rgba(0, 183, 255, 0.5);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.faculty-card__image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 18px;
 }
 
 .footer-section {
-    width: 90%;
-    height: 200px;
+    width: 100%;
     background-color: rgba(45, 177, 38, 0.3); 
 }
