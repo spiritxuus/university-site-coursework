@@ -51,6 +51,7 @@
     padding: 0.75rem 1.5rem;
     border-radius: 999px;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: auto;
 }
 
 .more-link:hover {
@@ -101,7 +102,8 @@
 }
 
 .news-slider__track{
-    display: flex;
+    display: block ruby;
+    align-items: stretch;
     gap: 1rem;
 }
 
@@ -109,10 +111,15 @@
     box-sizing: border-box;
     flex: 0 0 50%;
     scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     padding: 1.5rem;
     border-radius: 32px;
     background: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.3);
+    scroll-snap-align: start;
+    margin-top: auto;
 }
 
 .faculty-section {
@@ -153,6 +160,21 @@
 }
 
 .footer-section {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
     width: 100%;
     background-color: rgba(45, 177, 38, 0.3); 
+}
+
+.footer-section__item{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 1rem;
+}
+
+.footer-section__image {
+    opacity: 0.9; 
+    filter: invert(1) brightness(2);
+    flex-shrink: 0;
 }
