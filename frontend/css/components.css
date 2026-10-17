@@ -89,6 +89,13 @@
     border-radius: 32px;
 }
 
+.about-faculty-section__image{
+    width: 80%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 32px;
+}
+
 .news-section {
     width: 80%;
     padding: 2rem;
@@ -154,6 +161,13 @@
 
 .faculty-card__image {
     width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.faculty-card__image-more {
+    width: 30%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     border-radius: 18px;
